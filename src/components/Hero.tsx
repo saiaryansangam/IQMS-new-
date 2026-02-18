@@ -2,7 +2,6 @@ import { ArrowRight, Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-<<<<<<< HEAD
     <section className="relative pt-32 pb-20 overflow-hidden min-h-[70vh] flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg" style={{backgroundImage: 'url("/images/qms2.jpg")'}} />
@@ -35,36 +34,10 @@ export default function Hero() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="group bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-=======
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-32 pb-20 overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-block">
-              <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-                ISO Compliant • Cloud-Based • Enterprise Ready
-              </span>
-            </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              All-in-One Integrated Quality Management System
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Manage audits, documents, CAPA, training & compliance from one powerful platform.
-              Streamline operations and achieve 100% regulatory readiness.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                Request Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="group bg-white text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all border-2 border-gray-200 flex items-center justify-center gap-2">
->>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
                 <Play className="w-5 h-5" />
-                Watch Overview
+                Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
             <div className="flex items-center gap-8 text-sm text-gray-200 hero-features">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full hero-dot"></div>
@@ -72,28 +45,20 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full hero-dot"></div>
-=======
-            <div className="flex items-center gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                No credit card required
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
->>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
                 Free 30-day trial
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="relative flex justify-center hero-image">
-            <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-3 flex flex-col items-center w-full max-w-md border border-white/20 hero-image-container">
+          <div className="relative hero-image-container">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
               <img 
                 src="/images/qms.jpg" 
-                alt="QMS Dashboard Preview" 
-                className="rounded-2xl w-full h-auto object-cover shadow-lg"
+                alt="Dashboard Preview" 
+                className="w-full h-auto object-cover"
               />
             </div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-200 rounded-full blur-3xl opacity-50"></div>
           </div>
         </div>
       </div>
@@ -103,16 +68,19 @@ export default function Hero() {
         /* Initial page load animations */
         @keyframes hero-bg-pan {
           0% {
-            transform: scale(1.1) translateX(-5%);
-            filter: blur(2px);
+            transform: scale(1.2) translateX(-8%);
+            filter: blur(3px);
+            opacity: 0;
           }
           50% {
-            transform: scale(1.05) translateX(0%);
+            transform: scale(1.1) translateX(-4%);
             filter: blur(1px);
+            opacity: 0.8;
           }
           100% {
             transform: scale(1) translateX(0%);
             filter: blur(0px);
+            opacity: 1;
           }
         }
 
@@ -127,7 +95,7 @@ export default function Hero() {
 
         @keyframes hero-pulse-slow {
           0%, 100% {
-            opacity: 0.3;
+            opacity: 0.2;
             transform: scale(1);
           }
           50% {
@@ -139,10 +107,10 @@ export default function Hero() {
         @keyframes hero-glow-move {
           0%, 100% {
             opacity: 0;
-            transform: translateX(-10%) translateY(-10%);
+            transform: translateX(-15%) translateY(-15%);
           }
           50% {
-            opacity: 0.2;
+            opacity: 0.3;
             transform: translateX(0%) translateY(0%);
           }
         }
@@ -150,13 +118,13 @@ export default function Hero() {
         @keyframes hero-slide-up {
           0% {
             opacity: 0;
-            transform: translateY(60px) scale(0.95);
-            filter: blur(4px);
+            transform: translateY(80px) scale(0.9);
+            filter: blur(6px);
           }
           50% {
-            opacity: 0.8;
-            transform: translateY(20px) scale(0.98);
-            filter: blur(1px);
+            opacity: 0.7;
+            transform: translateY(30px) scale(0.95);
+            filter: blur(2px);
           }
           100% {
             opacity: 1;
@@ -168,17 +136,17 @@ export default function Hero() {
         @keyframes hero-slide-right {
           0% {
             opacity: 0;
-            transform: translateX(80px) scale(0.9);
-            filter: blur(6px);
+            transform: translateX(120px) scale(0.8) rotateY(-15deg);
+            filter: blur(8px);
           }
           50% {
-            opacity: 0.7;
-            transform: translateX(30px) scale(0.95);
-            filter: blur(2px);
+            opacity: 0.6;
+            transform: translateX(40px) scale(0.9) rotateY(-5deg);
+            filter: blur(3px);
           }
           100% {
             opacity: 1;
-            transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1) rotateY(0deg);
             filter: blur(0px);
           }
         }
@@ -186,13 +154,13 @@ export default function Hero() {
         @keyframes hero-scale-in {
           0% {
             opacity: 0;
-            transform: scale(0.8);
-            filter: blur(8px);
+            transform: scale(0.7);
+            filter: blur(10px);
           }
           50% {
-            opacity: 0.6;
-            transform: scale(0.9);
-            filter: blur(2px);
+            opacity: 0.5;
+            transform: scale(0.85);
+            filter: blur(3px);
           }
           100% {
             opacity: 1;
@@ -207,105 +175,109 @@ export default function Hero() {
             opacity: 0;
           }
           50% {
-            transform: scale(1.5);
+            transform: scale(2);
             opacity: 1;
           }
         }
 
-        @keyframes hero-rotate-3d {
-          0% {
-            opacity: 0;
-            transform: perspective(1000px) rotateY(-30deg) rotateX(15deg) scale(0.8);
-            filter: blur(4px);
+        @keyframes hero-float {
+          0%, 100% {
+            transform: translateY(0px);
           }
           50% {
-            opacity: 0.7;
-            transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) scale(0.95);
-            filter: blur(1px);
-          }
-          100% {
-            opacity: 1;
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
-            filter: blur(0px);
+            transform: translateY(-10px);
           }
         }
 
-        /* Apply animations */
+        @keyframes hero-shimmer {
+          0% {
+            background-position: -200% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
+        }
+
+        /* Apply animations with improved timing */
         .hero-bg {
-          animation: hero-bg-pan 2s ease-out forwards;
+          animation: hero-bg-pan 3s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
         }
 
         .hero-overlay {
-          animation: hero-overlay-fade 1.5s ease-out forwards;
+          animation: hero-overlay-fade 2s ease-out forwards;
         }
 
         .hero-pulse {
-          animation: hero-pulse-slow 4s ease-in-out infinite;
-          animation-delay: 1s;
+          animation: hero-pulse-slow 6s ease-in-out infinite;
+          animation-delay: 1.5s;
         }
 
         .hero-glow {
-          animation: hero-glow-move 6s ease-in-out infinite;
-          animation-delay: 0.5s;
+          animation: hero-glow-move 8s ease-in-out infinite;
+          animation-delay: 1s;
         }
 
         .hero-badge {
-          animation: hero-slide-up 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
-          animation-delay: 0.3s;
+          animation: hero-slide-up 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation-delay: 0.4s;
           opacity: 0;
         }
 
         .hero-title {
-          animation: hero-slide-up 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
-          animation-delay: 0.5s;
-          opacity: 0;
-        }
-
-        .hero-subtitle {
-          animation: hero-slide-up 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+          animation: hero-slide-up 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
           animation-delay: 0.7s;
           opacity: 0;
         }
 
-        .hero-buttons {
-          animation: hero-scale-in 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
-          animation-delay: 0.9s;
-          opacity: 0;
-        }
-
-        .hero-features {
-          animation: hero-slide-up 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
-          animation-delay: 1.1s;
-          opacity: 0;
-        }
-
-        .hero-dot {
-          animation: hero-dot-pulse 2s ease-out forwards;
-          animation-delay: 1.3s;
-        }
-
-        .hero-image {
-          animation: hero-slide-right 1.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
-          animation-delay: 0.8s;
-          opacity: 0;
-        }
-
-        .hero-image-container {
-          animation: hero-rotate-3d 1.8s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+        .hero-subtitle {
+          animation: hero-slide-up 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
           animation-delay: 1s;
           opacity: 0;
         }
 
-        /* Smooth transitions for hover states */
-        .hero-badge span,
-        .hero-title,
-        .hero-subtitle,
-        .hero-buttons button,
-        .hero-image img {
-          transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        .hero-buttons {
+          animation: hero-scale-in 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation-delay: 1.3s;
+          opacity: 0;
         }
 
-        /* Reduce motion for accessibility */
+        .hero-features {
+          animation: hero-slide-up 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation-delay: 1.6s;
+          opacity: 0;
+        }
+
+        .hero-dot {
+          animation: hero-dot-pulse 2.5s ease-out forwards;
+          animation-delay: 1.9s;
+        }
+
+        /* Image container animations */
+        .hero-image-container {
+          animation: hero-slide-right 2.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation-delay: 0.9s;
+          opacity: 0;
+        }
+
+        /* Button hover effects */
+        .hero-buttons button {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero-buttons button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+          animation: hero-shimmer 3s infinite;
+          animation-delay: 2s;
+        }
+
+        /* Responsive animations */
         @media (prefers-reduced-motion: reduce) {
           .hero-bg,
           .hero-overlay,
@@ -317,7 +289,6 @@ export default function Hero() {
           .hero-buttons,
           .hero-features,
           .hero-dot,
-          .hero-image,
           .hero-image-container {
             animation: none;
             opacity: 1;
@@ -326,24 +297,6 @@ export default function Hero() {
           }
         }
       `}</style>
-=======
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
-              <div className="aspect-video bg-gradient-to-br from-blue-100 to-teal-100 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-white">IQ</span>
-                  </div>
-                  <p className="text-gray-600 font-medium">Dashboard Preview</p>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-200 rounded-full blur-3xl opacity-50"></div>
-          </div>
-        </div>
-      </div>
->>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
     </section>
   );
 }

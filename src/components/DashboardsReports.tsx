@@ -30,7 +30,6 @@ export default function DashboardsReports() {
   ];
 
   return (
-<<<<<<< HEAD
     <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -50,15 +49,6 @@ export default function DashboardsReports() {
             Dashboards & Reports
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-=======
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Dashboards & Reports
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
->>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
             Make data-driven decisions with powerful analytics and real-time insights
           </p>
         </div>
@@ -87,51 +77,12 @@ export default function DashboardsReports() {
           </div>
 
           <div className="order-1 lg:order-2">
-<<<<<<< HEAD
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-100">
               <img 
                 src="/images/report.jpg" 
                 alt="Dashboard Preview"
                 className="w-full h-full object-cover"
               />
-=======
-            <div className="bg-gradient-to-br from-blue-600 to-teal-600 rounded-2xl p-8 shadow-2xl">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-white font-bold">Compliance Dashboard</h4>
-                  <span className="text-green-300 text-sm">Live</span>
-                </div>
-                <div className="space-y-4">
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80 text-sm">Audits Completed</span>
-                      <span className="text-white font-bold">89%</span>
-                    </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
-                      <div className="bg-green-400 h-2 rounded-full" style={{ width: '89%' }}></div>
-                    </div>
-                  </div>
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80 text-sm">Training Compliance</span>
-                      <span className="text-white font-bold">94%</span>
-                    </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
-                      <div className="bg-blue-400 h-2 rounded-full" style={{ width: '94%' }}></div>
-                    </div>
-                  </div>
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80 text-sm">CAPA Effectiveness</span>
-                      <span className="text-white font-bold">92%</span>
-                    </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
-                      <div className="bg-teal-400 h-2 rounded-full" style={{ width: '92%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
->>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
             </div>
           </div>
         </div>
