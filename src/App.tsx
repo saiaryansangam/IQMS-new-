@@ -10,16 +10,22 @@ import WhyChoose from './components/WhyChoose';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import { useScrollAnimations } from './hooks/useScrollAnimations';
 
 function App() {
   // Initialize scroll animations for parallax effects
   useScrollAnimations();
 
+=======
+
+function App() {
+>>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
+<<<<<<< HEAD
       <HowItWorks />
       <WhyChoose />
       <ComplianceStandards />
@@ -27,6 +33,15 @@ function App() {
       <Industries />
       <RoleBasedAccess />
       <DashboardsReports />
+=======
+      <ComplianceStandards />
+      <CoreModules />
+      <HowItWorks />
+      <RoleBasedAccess />
+      <DashboardsReports />
+      <Industries />
+      <WhyChoose />
+>>>>>>> 228373a9ba89f1c0a20d6d3454de17b4a8a0ac92
       <Testimonials />
       <CTA />
       <Footer />
