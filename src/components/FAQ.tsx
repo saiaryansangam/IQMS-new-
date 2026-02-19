@@ -47,15 +47,15 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-blue-100/40 to-cyan-50/20 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl animate-pulse delay-500" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-100/10 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200 mb-6">
@@ -70,76 +70,101 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* FAQ Items */}
-        <div className="space-y-4">
-          {faqs.map((faq, index) => {
-            const Icon = faq.icon;
-            const isActive = activeIndex === index;
-            
-            return (
-              <div
-                key={index}
-                className="group relative"
-                style={{animationDelay: `${index * 100}ms`}}
-              >
-                {/* FAQ Card */}
-                <div
-                  className={`bg-white rounded-2xl border transition-all duration-300 cursor-pointer ${
-                    isActive 
-                      ? 'border-blue-300 shadow-xl' 
-                      : 'border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300'
-                  }`}
-                  onClick={() => toggleFAQ(index)}
-                >
-                  <div className="p-6">
-                    {/* Question Header */}
-                    <div className="flex items-start gap-4">
-                      {/* Icon */}
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${faq.color} flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg transition-all duration-300`}>
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between gap-4">
-                          <div className="flex-1">
-                            <h3 className="text-lg font-bold text-gray-900 pr-4">
-                              {faq.question}
-                            </h3>
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Side - Image */}
+          <div className="order-2 lg:order-1">
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-200">
+                <img 
+                  src="/images/FAQ1.jpg" 
+                  alt="FAQ Support" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center shadow-lg">
+                <HelpCircle className="w-12 h-12 text-blue-600" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center shadow-lg">
+                <HelpCircle className="w-8 h-8 text-cyan-600" />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - FAQ Items */}
+          <div className="order-1 lg:order-2">
+            <div className="space-y-4">
+              {faqs.map((faq, index) => {
+                const Icon = faq.icon;
+                const isActive = activeIndex === index;
+                
+                return (
+                  <div
+                    key={index}
+                    className="group relative"
+                    style={{animationDelay: `${index * 100}ms`}}
+                  >
+                    {/* FAQ Card */}
+                    <div
+                      className={`bg-white/80 backdrop-blur-sm rounded-2xl border transition-all duration-300 cursor-pointer ${
+                        isActive 
+                          ? 'border-blue-300 shadow-xl' 
+                          : 'border-blue-200 shadow-sm hover:shadow-md hover:border-blue-300'
+                      }`}
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <div className="p-6">
+                        {/* Question Header */}
+                        <div className="flex items-start gap-4">
+                          {/* Icon */}
+                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${faq.color} flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg transition-all duration-300`}>
+                            <Icon className="w-6 h-6 text-white" />
                           </div>
                           
-                          {/* Chevron */}
-                          <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            isActive 
-                              ? 'bg-blue-100 text-blue-600 rotate-180' 
-                              : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200'
-                          }`}>
-                            <ChevronDown className="w-4 h-4" />
-                          </div>
-                        </div>
-                        
-                        {/* Answer */}
-                        <div className={`overflow-hidden transition-all duration-300 ${
-                          isActive ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
-                        }`}>
-                          <div className="pt-4 border-t border-gray-100">
-                            <div className="text-gray-600 leading-relaxed whitespace-pre-line">
-                              {faq.answer}
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center justify-between gap-4">
+                              <div className="flex-1">
+                                <h3 className="text-lg font-bold text-gray-900 pr-4">
+                                  {faq.question}
+                                </h3>
+                              </div>
+                              
+                              {/* Chevron */}
+                              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                                isActive 
+                                  ? 'bg-blue-100 text-blue-600 rotate-180' 
+                                  : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200'
+                              }`}>
+                                <ChevronDown className="w-4 h-4" />
+                              </div>
+                            </div>
+                            
+                            {/* Answer */}
+                            <div className={`overflow-hidden transition-all duration-300 ${
+                              isActive ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+                            }`}>
+                              <div className="pt-4 border-t border-gray-100">
+                                <div className="text-gray-600 leading-relaxed whitespace-pre-line">
+                                  {faq.answer}
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    
+                    {/* Glow Effect on Active */}
+                    {isActive && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl -z-10 blur-xl"></div>
+                    )}
                   </div>
-                </div>
-                
-                {/* Glow Effect on Active */}
-                {isActive && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl -z-10 blur-xl"></div>
-                )}
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}

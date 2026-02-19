@@ -25,14 +25,14 @@ export default function RoleBasedAccess() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-50 text-gray-800 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             Enterprise-Grade Security
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Role-based access control with comprehensive security features
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function RoleBasedAccess() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-200">
               <img src="/images/new.jpg" alt="User Roles" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -53,14 +53,14 @@ export default function RoleBasedAccess() {
                 return (
                   <div
                     key={feature.title}
-                    className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                    className="flex items-start gap-4 bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-blue-200"
                   >
                     <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">{feature.title}</h4>
-                      <p className="text-blue-100 text-sm">{feature.description}</p>
+                      <h4 className="font-bold mb-1 text-gray-800">{feature.title}</h4>
+                      <p className="text-gray-600 text-sm">{feature.description}</p>
                     </div>
                   </div>
                 );

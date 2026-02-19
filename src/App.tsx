@@ -8,6 +8,7 @@ import DashboardsReports from './components/DashboardsReports';
 import Industries from './components/Industries';
 import WhyChoose from './components/WhyChoose';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -26,6 +27,7 @@ function App() {
 
 
       <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </div>
