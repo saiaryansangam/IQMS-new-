@@ -1,47 +1,26 @@
 import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Change header style when scrolled past hero section
-      if (window.scrollY > window.innerHeight * 0.7) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
-    { name: 'HOW IQMS WORKS', href: '#how-it-works' },
-    { name: 'WHY CHOOSE US', href: '#why-choose-us' },
-    { name: 'TESTIMONIALS', href: '#testimonials' },
-    { name: 'INDUSTRIES', href: '#industries' },
-    { name: 'CORE MODULES', href: '#core-modules' }
+    { name: 'HOW IQMS WORKS', href: '#How IQMS WORKS' },
+    { name: 'WHY CHOOSE US', href: '#WHY CHOOSE US' },
+    { name: 'TESTIMONIALS', href: '#TESTIMONIALS' },
+    { name: 'INDUSTRIES', href: '#INDUSTRIES' },
+    { name: 'CORE MODULES', href: '#CORE MODULES' }
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 ${
-              isScrolled ? 'bg-gradient-to-br from-blue-600 to-teal-600' : 'bg-gradient-to-br from-blue-600 to-teal-600'
-            }`}>
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-xl font-bold text-white">IQ</span>
             </div>
-            <span className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>IQMS</span>
+            <span className="text-xl font-bold text-white">IQMS</span>
           </div>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -49,23 +28,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-900 hover:text-blue-600' : 'text-white/90 hover:text-white'
-                }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector(link.href);
-                  if (element) {
-                    const headerOffset = 80; // Height of fixed header
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
+                className="text-white/90 hover:text-white font-medium transition-colors"
               >
                 {link.name}
               </a>
@@ -73,16 +36,10 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button className={`font-medium transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900 hover:text-blue-600' : 'text-white/90 hover:text-white'
-            }`}>
+            <button className="text-white/90 hover:text-white font-medium transition-colors">
               Sign In
             </button>
-            <button className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg border ${
-              isScrolled 
-                ? 'bg-blue-600 text-white hover:bg-blue-700 border-blue-500/30' 
-                : 'bg-blue-600 text-white hover:bg-blue-700 border-blue-500/30'
-            }`}>
+            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg border border-blue-500/30">
               Get Started
             </button>
           </div>
@@ -92,13 +49,9 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className={`w-6 h-6 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`} />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className={`w-6 h-6 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`} />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </button>
         </div>

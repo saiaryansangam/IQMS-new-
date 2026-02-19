@@ -10,12 +10,8 @@ import WhyChoose from './components/WhyChoose';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import { useScrollAnimations } from './hooks/useScrollAnimations';
 
 function App() {
-  // Initialize scroll animations for parallax effects
-  useScrollAnimations();
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -27,6 +23,8 @@ function App() {
       <Industries />
       <RoleBasedAccess />
       <DashboardsReports />
+
+
       <Testimonials />
       <CTA />
       <Footer />

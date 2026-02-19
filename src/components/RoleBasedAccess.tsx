@@ -25,32 +25,22 @@ export default function RoleBasedAccess() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100 text-gray-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl animate-pulse delay-500" />
-      </div>
-      
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              SECURITY
-            </span>
-          </div>
-          <h2 className="text-5xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-4">
             Enterprise-Grade Security
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Role-based access control with comprehensive security features
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
               <img src="/images/new.jpg" alt="User Roles" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -63,14 +53,14 @@ export default function RoleBasedAccess() {
                 return (
                   <div
                     key={feature.title}
-                    className="flex items-start gap-4 bg-white rounded-lg p-4 border border-gray-100 shadow-sm hover:shadow-md transition-all"
+                    className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1 text-gray-900">{feature.title}</h4>
-                      <p className="text-gray-600 text-sm">{feature.description}</p>
+                      <h4 className="font-bold mb-1">{feature.title}</h4>
+                      <p className="text-blue-100 text-sm">{feature.description}</p>
                     </div>
                   </div>
                 );
